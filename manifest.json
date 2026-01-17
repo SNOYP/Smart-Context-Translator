@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Elegant Context Translator",
+  "version": "1.2",
+  "permissions": ["contextMenus", "activeTab", "scripting", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["split_logic.js"],
+      "css": ["split_styles.css"]
+    }
+  ]
+}
