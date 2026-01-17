@@ -60,11 +60,9 @@ async function buildElegantPopup() {
 
   document.body.appendChild(popup);
 
-  // Позиционирование под выделением
   popup.style.left = `${rect.left + window.scrollX}px`;
   popup.style.top = `${rect.bottom + window.scrollY + 12}px`;
 
-  // События
   document.getElementById('tr-close-x').onclick = () => popup.remove();
 
   document.getElementById('tr-gear-btn').onclick = () => {
